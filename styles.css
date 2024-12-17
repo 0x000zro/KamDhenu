@@ -1,1 +1,93 @@
-/* ... Previous styles ... */ body { background: #fff; color: #333; line-height: 1.6; font-family: 'Roboto', sans-serif; } .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; } /* Navigation for mobile */ #mobileNavToggle { display: none; background: none; border: none; cursor: pointer; } #mobileNavToggle span { display: block; width: 25px; height: 3px; background: #FF4500; margin: 5px 0; } /* Responsive design */ @media (max-width: 768px) { #mobileNavToggle { display: block; } #mainNav ul { display: none; position: absolute; top: 60px; left: 0; background: #FFD700; width: 100%; text-align: center; padding: 10px 0; } #mainNav ul.active { display: block; } #mainNav ul li { display: block; margin: 10px 0; } } /* Feature cards with icons */ .feature-card i { font-size: 2em; color: #FF4500; margin-bottom: 10px; } /* Roadmap and tokenomics styles */ .tokenomics-content, .roadmap-timeline { background: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; border-radius: 8px; } /* Team section */ .team-members { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; } .team-members img { border-radius: 50%; border: 3px solid #FFD700; } /* Contact form */ #contactForm { display: flex; flex-direction: column; } #contactForm input, #contactForm textarea { margin-bottom: 10px; padding: 10px; border: 1px solid #FF4500; border-radius: 4px; } #contactForm button { background: #FF4500; color: #FFD700; border: none; padding: 10px; cursor: pointer; font-family: 'Poppins', sans-serif; transition: background 0.3s ease; } #contactForm button:hover { background: #FFD700; color: #FF4500; }
+/* General Styles */
+body {
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navigation for Mobile */
+#mobileNavToggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#mobileNavToggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #FF4500;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #mobileNavToggle {
+        display: block;
+    }
+
+    #mainNav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #FFD700;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #mainNav ul.active {
+        display: block;
+    }
+
+    #mainNav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Feature Cards with Icons */
+.feature-card i {
+    font-size: 2em;
+    color: #FF4500;
+    margin-bottom: 10px;
+}
+
+/* Roadmap and Tokenomics Styles */
+.tokenomics-content,
+.roadmap-timeline {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Team Section */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-members img {
+    border-radius: 50%;
+    border: 3px solid #FFD700;
+}
+
+/* Contact Form */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact
