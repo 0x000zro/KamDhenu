@@ -20,7 +20,7 @@
                 <h1>Kamdhenu Crypto Project</h1>
                 <p>Symbolizing Abundance and Prosperity</p>
                 <div class="hero-image">
-                    <img src="kamdhenu-3d.png" alt="Kamdhenu Illustration">
+                    <img src="assets/kamdhenu-3d.png" alt="Kamdhenu Illustration">
                 </div>
                 <button id="connectButton">Connect Wallet</button>
             </div>
@@ -39,7 +39,6 @@
             <div class="container">
                 <h2>Tokenomics</h2>
                 <p>Details about the Dhenu coin supply, allocation, and utility.</p>
-                <!-- Add detailed tokenomics information here -->
             </div>
         </section>
 
@@ -48,7 +47,6 @@
             <div class="container">
                 <h2>Roadmap</h2>
                 <p>Our project's milestones and future plans.</p>
-                <!-- Add a timeline showcasing the roadmap -->
             </div>
         </section>
 
@@ -57,7 +55,6 @@
             <div class="container">
                 <h2>How It Works</h2>
                 <p>Steps to buy and utilize the Dhenu coin.</p>
-                <!-- Add detailed steps -->
             </div>
         </section>
 
@@ -66,7 +63,6 @@
             <div class="container">
                 <h2>Join Our Community</h2>
                 <p>Connect with us on social platforms.</p>
-                <!-- Add social media links -->
             </div>
         </section>
 
@@ -80,30 +76,6 @@
         </section>
     </div>
 
-    <script>
-        // Loading animation script
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('content');
-            loader.classList.add('hidden');
-            content.classList.remove('hidden');
-        });
-
-        // MetaMask integration script
-        const connectButton = document.getElementById('connectButton');
-
-        connectButton.addEventListener('click', async () => {
-            if (typeof window.ethereum !== 'undefined') {
-                try {
-                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-                    alert(`Connected: ${accounts[0]}`);
-                } catch (error) {
-                    console.error('User rejected the request.');
-                }
-            } else {
-                alert('Please install MetaMask to use this feature.');
-            }
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
