@@ -7,39 +7,75 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="hero-section">
-            <h1>Kamdhenu Crypto Project</h1>
-            <p>Embrace Abundance and Prosperity</p>
-            <button class="cta-btn">Buy Dhenu Coin</button>
-            <button class="cta-btn">Join Community</button>
-        </div>
-    </header>
-    <main>
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="cow-animation"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="content" class="hidden">
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <h1>Kamdhenu Crypto Project</h1>
+                <p>Symbolizing Abundance and Prosperity</p>
+                <div class="hero-image">
+                    <img src="assets/kamdhenu-3d.png" alt="Kamdhenu Illustration">
+                </div>
+                <button id="connectButton">Connect Wallet</button>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
         <section id="about">
-            <h2>About Us</h2>
-            <p>Brief about the project's vision and cultural significance.</p>
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Our project is inspired by the divine Kamdhenu cow, symbolizing abundance and prosperity in Indian culture. We aim to bring these values to the crypto world through the Dhenu coin.</p>
+            </div>
         </section>
+
+        <!-- Tokenomics Section -->
         <section id="tokenomics">
-            <h2>Tokenomics</h2>
-            <p>Details about the 'Dhenu' coin supply, allocation, and utility.</p>
+            <div class="container">
+                <h2>Tokenomics</h2>
+                <p>Details about the Dhenu coin supply, allocation, and utility.</p>
+            </div>
         </section>
+
+        <!-- Roadmap Section -->
         <section id="roadmap">
-            <h2>Roadmap</h2>
-            <p>Project milestones and future plans.</p>
+            <div class="container">
+                <h2>Roadmap</h2>
+                <p>Our project's milestones and future plans.</p>
+            </div>
         </section>
+
+        <!-- How It Works Section -->
         <section id="how-it-works">
-            <h2>How It Works</h2>
-            <p>Steps to buy and utilize the 'Dhenu' coin.</p>
+            <div class="container">
+                <h2>How It Works</h2>
+                <p>Steps to buy and utilize the Dhenu coin.</p>
+            </div>
         </section>
+
+        <!-- Community Section -->
         <section id="community">
-            <h2>Community</h2>
-            <p>Join the Kamdhenu crypto community on social platforms.</p>
+            <div class="container">
+                <h2>Join Our Community</h2>
+                <p>Connect with us on social platforms.</p>
+            </div>
         </section>
-    </main>
-    <footer>
-        <button class="cta-btn">Contact Support</button>
-    </footer>
+
+        <!-- Call-to-Action Section -->
+        <section id="call-to-action">
+            <div class="container">
+                <button>Buy Dhenu Coin</button>
+                <button>Join Community</button>
+                <button>Contact Support</button>
+            </div>
+        </section>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
