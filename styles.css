@@ -1,49 +1,103 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #fff;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: #fffbea;
+    color: #333;
 }
 
-header {
-    background: linear-gradient(to right, #FFD700, #FF9933);
-    color: #fff;
-    text-align: center;
-    padding: 50px 0;
+.hidden {
+    display: none;
 }
 
-.hero-section h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3em;
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fffbea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-section p {
-    font-size: 1.2em;
+.cow-animation {
+    width: 50px;
+    height: 50px;
+    background: url('assets/cow-animation.gif') no-repeat center center;
+    background-size: cover;
 }
 
-.cta-btn {
-    background-color: #50C878;
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
-    margin: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cta-btn:hover {
-    background-color: #388e3c;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 section {
-    padding: 50px 20px;
+    padding: 60px 0;
+}
+
+#hero {
+    text-align: center;
+    background-color: #fff8e1;
+    padding: 100px 0;
+}
+
+#hero h1 {
+    font-size: 3em;
+    color: #d4a017;
+}
+
+#hero p {
+    font-size: 1.5em;
+    color: #8b5e3c;
+}
+
+.hero-image img {
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+#connectButton {
+    padding: 15px 30px;
+    font-size: 1em;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#connectButton:hover {
+    background-color: #e6b800;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #d4a017;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #8b5e3c;
     text-align: center;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e6b800;
 }
