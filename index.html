@@ -3,121 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhenu - Empowering Wealth with Cultural Roots</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Kamdhenu Crypto Project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#tokenomics">Tokenomics</a></li>
-                    <li><a href="#roadmap">Roadmap</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button id="mobileNavToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
-        </div>
-    </header>
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="cow-animation"></div>
+    </div>
 
-    <main>
-        <section class="hero" id="home">
+    <!-- Main Content -->
+    <div id="content" class="hidden">
+        <!-- Hero Section -->
+        <section id="hero">
             <div class="container">
-                <h1>Dhenu - Empowering Wealth with Cultural Roots</h1>
-                <p>A bridge between tradition and innovation</p>
-                <a href="#features" class="cta-button">Explore Dhenu</a>
-            </div>
-        </section>
-
-        <section class="section" id="about">
-            <div class="container">
-                <h2>About Dhenu</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Dhenu combines the purity of cultural heritage with the innovation of blockchain technology. Our platform is designed to provide secure, transparent financial transactions while celebrating the rich tapestry of Indian culture.</p>
-                    </div>
-                    <div class="about-image">
-                        <!-- Image or SVG of Blockchain with Indian motifs -->
-                    </div>
+                <h1>Kamdhenu Crypto Project</h1>
+                <p>Symbolizing Abundance and Prosperity</p>
+                <div class="hero-image">
+                    <img src="kamdhenu-3d.png" alt="Kamdhenu Illustration">
                 </div>
+                <button id="connectButton">Connect Wallet</button>
             </div>
         </section>
 
-        <section class="section" id="features">
+        <!-- About Us Section -->
+        <section id="about">
             <div class="container">
-                <h2>Features</h2>
-                <div class="feature-cards">
-                    <div class="feature-card">
-                        <i class="icon-lotus"></i>
-                        <h3>Purity</h3>
-                        <p>Symbolized by the Lotus, our technology ensures clean, transparent transactions.</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="icon-diya"></i>
-                        <h3>Enlightenment</h3>
-                        <p>The Diya represents our commitment to enlightening users with knowledge and innovation.</p>
-                    </div>
-                </div>
+                <h2>About Us</h2>
+                <p>Our project is inspired by the divine Kamdhenu cow, symbolizing abundance and prosperity in Indian culture. We aim to bring these values to the crypto world through the Dhenu coin.</p>
             </div>
         </section>
 
-        <section class="section" id="tokenomics">
+        <!-- Tokenomics Section -->
+        <section id="tokenomics">
             <div class="container">
                 <h2>Tokenomics</h2>
-                <div class="tokenomics-content">
-                    <p>Here's how our tokens are distributed:</p>
-                    <!-- Placeholder for infographics or detailed text -->
-                    <div class="token-chart"></div>
-                </div>
+                <p>Details about the Dhenu coin supply, allocation, and utility.</p>
+                <!-- Add detailed tokenomics information here -->
             </div>
         </section>
 
-        <section class="section" id="roadmap">
+        <!-- Roadmap Section -->
+        <section id="roadmap">
             <div class="container">
                 <h2>Roadmap</h2>
-                <div class="roadmap-timeline">
-                    <!-- Timeline items -->
-                </div>
+                <p>Our project's milestones and future plans.</p>
+                <!-- Add a timeline showcasing the roadmap -->
             </div>
         </section>
 
-        <section class="section" id="team">
+        <!-- How It Works Section -->
+        <section id="how-it-works">
             <div class="container">
-                <h2>Our Team</h2>
-                <div class="team-members">
-                    <!-- Team member profiles -->
-                </div>
+                <h2>How It Works</h2>
+                <p>Steps to buy and utilize the Dhenu coin.</p>
+                <!-- Add detailed steps -->
             </div>
         </section>
 
-        <section class="section" id="contact">
+        <!-- Community Section -->
+        <section id="community">
             <div class="container">
-                <h2>Contact Us</h2>
-                <form id="contactForm">
-                    <!-- Form inputs for name, email, message -->
-                </form>
+                <h2>Join Our Community</h2>
+                <p>Connect with us on social platforms.</p>
+                <!-- Add social media links -->
             </div>
         </section>
-    </main>
 
-    <footer>
-        <div class="container">
-            <nav class="footer-nav">
-                <a href="#">Twitter</a> | <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
-            </nav>
-            <p>© 2024 Dhenu. All rights reserved.</p>
-        </div>
-    </footer>
+        <!-- Call-to-Action Section -->
+        <section id="call-to-action">
+            <div class="container">
+                <button>Buy Dhenu Coin</button>
+                <button>Join Community</button>
+                <button>Contact Support</button>
+            </div>
+        </section>
+    </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Loading animation script
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
+            loader.classList.add('hidden');
+            content.classList.remove('hidden');
+        });
+
+        // MetaMask integration script
+        const connectButton = document.getElementById('connectButton');
+
+        connectButton.addEventListener('click', async () => {
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    alert(`Connected: ${accounts[0]}`);
+                } catch (error) {
+                    console.error('User rejected the request.');
+                }
+            } else {
+                alert('Please install MetaMask to use this feature.');
+            }
+        });
+    </script>
 </body>
 </html>
