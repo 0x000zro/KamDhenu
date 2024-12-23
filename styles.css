@@ -1,93 +1,103 @@
-/* General Styles */
 body {
-    background: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fffbea;
     color: #333;
-    line-height: 1.6;
-    font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fffbea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cow-animation {
+    width: 50px;
+    height: 50px;
+    background: url('cow-animation.gif') no-repeat center center;
+    background-size: cover;
 }
 
 .container {
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 20px 0;
 }
 
-/* Navigation for Mobile */
-#mobileNavToggle {
-    display: none;
-    background: none;
+section {
+    padding: 60px 0;
+}
+
+#hero {
+    text-align: center;
+    background-color: #fff8e1;
+    padding: 100px 0;
+}
+
+#hero h1 {
+    font-size: 3em;
+    color: #d4a017;
+}
+
+#hero p {
+    font-size: 1.5em;
+    color: #8b5e3c;
+}
+
+.hero-image img {
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+#connectButton {
+    padding: 15px 30px;
+    font-size: 1em;
+    background-color: #ffcc00;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#mobileNavToggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #FF4500;
-    margin: 5px 0;
+#connectButton:hover {
+    background-color: #e6b800;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #mobileNavToggle {
-        display: block;
-    }
-
-    #mainNav ul {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: #FFD700;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    #mainNav ul.active {
-        display: block;
-    }
-
-    #mainNav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+h2 {
+    font-size: 2.5em;
+    color: #d4a017;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Feature Cards with Icons */
-.feature-card i {
-    font-size: 2em;
-    color: #FF4500;
-    margin-bottom: 10px;
+p {
+    font-size: 1.2em;
+    color: #8b5e3c;
+    text-align: center;
 }
 
-/* Roadmap and Tokenomics Styles */
-.tokenomics-content,
-.roadmap-timeline {
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Team Section */
-.team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+button:hover {
+    background-color: #e6b800;
 }
-
-.team-members img {
-    border-radius: 50%;
-    border: 3px solid #FFD700;
-}
-
-/* Contact Form */
-#contactForm {
-    display: flex;
-    flex-direction: column;
-}
-
-#contact
