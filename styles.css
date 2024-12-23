@@ -26,7 +26,7 @@ body {
 .cow-animation {
     width: 50px;
     height: 50px;
-    background: url('cow-animation.gif') no-repeat center center;
+    background: url('assets/cow-animation.gif') no-repeat center center;
     background-size: cover;
 }
 
