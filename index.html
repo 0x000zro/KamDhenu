@@ -5,25 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RUPE - The Meme Coin</title>
     <style>
-        /* styles.css content */
         /* General styling for iframes */
         iframe {
-            border: none; /* Remove default border */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-            border-radius: 10px; /* Rounded corners */
-            margin-top: 20px; /* Add some spacing */
+            border: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
             width: 100%;
             height: 600px;
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
             iframe {
-                margin-top: 10px; /* Adjust spacing for smaller screens */
+                margin-top: 10px;
             }
         }
 
-        /* Body and header styles */
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             margin: 0;
@@ -102,7 +99,7 @@
             transform: scale(1.1);
         }
 
-        .account-section, .about, .features, .roadmap, .staking, .team, .faq {
+        .section {
             padding: 1rem;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -112,7 +109,7 @@
             animation: fadeInUp 1s ease-in;
         }
 
-        .account-section h2, .about h2, .features h2, .roadmap h2, .staking h2, .team h2, .faq h2 {
+        .section h2 {
             margin-top: 0;
         }
 
@@ -185,7 +182,7 @@
             background-color: #444;
         }
 
-        .account-section.dark-mode {
+        .section.dark-mode {
             background-color: #263238;
         }
 
@@ -213,7 +210,6 @@
             background-color: #ffab91;
         }
 
-        /* Animations */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -234,7 +230,6 @@
             }
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.5rem;
@@ -254,7 +249,7 @@
                 margin: 1rem auto;
             }
 
-            .account-section, .about, .features, .roadmap, .staking, .team, .faq {
+            .section {
                 padding: 1rem;
                 margin: 1rem auto;
             }
@@ -273,8 +268,8 @@
                 <li><a href="#staking">Staking</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><button id="connectButton">Connect MetaMask</button></li>
-                <li><button id="darkModeToggle">Toggle Dark Mode</button></li>
+                <li><button id="connectButton" aria-label="Connect MetaMask">Connect MetaMask</button></li>
+                <li><button id="darkModeToggle" aria-label="Toggle Dark Mode">Toggle Dark Mode</button></li>
             </ul>
         </nav>
     </header>
@@ -284,16 +279,16 @@
             <p>The funniest and most rewarding meme coin on the Ethereum blockchain.</p>
             <img src="path_to_your_image.png" alt="RUPE Meme Coin" />
         </section>
-        <section class="account-section">
+        <section class="section account-section">
             <h2>Your Account</h2>
             <div id="account">Not connected</div>
             <div id="balance"></div>
         </section>
-        <section id="about" class="about">
+        <section id="about" class="section about">
             <h2>About RUPE</h2>
             <p>RUPE is a meme coin with a mission to bring joy and value to the crypto community.</p>
         </section>
-        <section id="features" class="features">
+        <section id="features" class="section features">
             <h2>Features</h2>
             <ul>
                 <li>Decentralized</li>
@@ -301,32 +296,31 @@
                 <li>Secure and Transparent</li>
             </ul>
         </section>
-        <section id="roadmap" class="roadmap">
+        <section id="roadmap" class="section roadmap">
             <h2>Roadmap</h2>
             <p>Our journey to revolutionize the meme coin space is just beginning. Stay tuned for updates!</p>
         </section>
-        <section id="staking" class="staking">
+        <section id="staking" class="section staking">
             <h2>Staking</h2>
             <p>Stake your RUPE tokens and earn rewards!</p>
-            <form id="stakingForm">
+            <form id="stakingForm" aria-labelledby="stakeAmount">
                 <label for="stakeAmount">Amount to Stake:</label>
-                <input type="number" id="stakeAmount" name="stakeAmount">
+                <input type="number" id="stakeAmount" name="stakeAmount" required aria-required="true">
                 <button type="submit">Stake</button>
             </form>
-            <div id="stakeMessage"></div>
+            <div id="stakeMessage" role="alert"></div>
         </section>
-        <section id="team" class="team">
+        <section id="team" class="section team">
             <h2>Team</h2>
             <p>Meet the team behind RUPE.</p>
             <!-- Team members' details can be added here -->
-        </section
-</section>
-        <section id="faq" class="faq">
+        </section>
+        <section id="faq" class="section faq">
             <h2>FAQ</h2>
             <p>Find answers to common questions.</p>
             <!-- FAQ details can be added here -->
         </section>
-        <section id="uniswap" class="uniswap">
+        <section id="uniswap" class="section uniswap">
             <h2>Buy/Sell RUPE on Uniswap</h2>
             <iframe src="https://app.uniswap.org/#/swap?outputCurrency=YOUR_TOKEN_ADDRESS" id="uniswap-iframe"></iframe>
         </section>
@@ -334,14 +328,13 @@
     <footer>
         <p>&copy; 2024 RUPE. All rights reserved.</p>
         <div class="social-media">
-            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-            <a href="https://discord.com/yourprofile" target="_blank">Discord</a>
-            <a href="https://telegram.org/yourprofile" target="_blank">Telegram</a>
+            <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter">Twitter</a>
+            <a href="https://discord.com/yourprofile" target="_blank" aria-label="Discord">Discord</a>
+            <a href="https://telegram.org/yourprofile" target="_blank" aria-label="Telegram">Telegram</a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
     <script>
-        // app.js content
         document.addEventListener('DOMContentLoaded', () => {
             const connectButton = document.getElementById('connectButton');
             const accountDiv = document.getElementById('account');
@@ -354,6 +347,7 @@
 
             // MetaMask connection
             connectButton.addEventListener('click', async () => {
+                connectButton.textContent = 'Connecting...';
                 if (typeof window.ethereum !== 'undefined') {
                     web3 = new Web3(window.ethereum);
                     try {
@@ -365,16 +359,19 @@
                         balanceDiv.textContent = `Balance: ${web3.utils.fromWei(balance, 'ether')} ETH`;
                     } catch (error) {
                         console.error(error);
+                    } finally {
+                        connectButton.textContent = 'Connect MetaMask';
                     }
                 } else {
                     alert('MetaMask not detected');
+                    connectButton.textContent = 'Connect MetaMask';
                 }
             });
 
             // Dark mode toggle
             darkModeToggle.addEventListener('click', () => {
                 body.classList.toggle('dark-mode');
-                document.querySelectorAll('header, footer, button, .account-section, .about, .features, .roadmap, .staking, .team, .faq').forEach(el => {
+                document.querySelectorAll('header, footer, button, .section').forEach(el => {
                     el.classList.toggle('dark-mode');
                 });
             });
@@ -386,10 +383,16 @@
             stakingForm.addEventListener('submit', async (event) => {
                 event.preventDefault();
                 const stakeAmount = document.getElementById('stakeAmount').value;
+                if (stakeAmount <= 0) {
+                    stakeMessage.textContent = 'Please enter a valid amount to stake.';
+                    return;
+                }
                 if (account && web3) {
                     try {
                         // Placeholder for staking logic
                         stakeMessage.textContent = `You have staked ${stakeAmount} RUPE tokens.`;
+                        // Reset form
+                        stakingForm.reset();
                     } catch (error) {
                         console.error(error);
                         stakeMessage.textContent = 'Staking failed. Please try again.';
